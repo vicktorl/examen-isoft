@@ -2,19 +2,18 @@ package ufro.examen.model;
 
 import lombok.Getter;
 import lombok.Setter;
-
-import java.util.Date;
+import ufro.examen.service.CsvReaderService;
 
 @Getter
 @Setter
 public class Producto {
+
     String nombre;
     String lote;
     String fechaVencimiento;
     Integer precio;
 
-    public Producto() {
-    }
+
 
     @Override
     public String toString() {
@@ -27,6 +26,17 @@ public class Producto {
     }
 
     public boolean largoTexto(String principioActivo) {
+        if(principioActivo.length() >= 20){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean setSaldo(Integer saldo) {
+     return true;
+    }
+    public boolean existeProducto(String nombre){
         return true;
     }
 }

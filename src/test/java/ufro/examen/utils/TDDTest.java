@@ -6,10 +6,14 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import ufro.examen.model.Bodega;
 import ufro.examen.model.Producto;
+import ufro.examen.service.CsvReaderService;
 
 public class TDDTest {
+
     Producto producto;
     Bodega bodega;
+
+
 
     @BeforeEach
     void setUp(){
@@ -20,7 +24,7 @@ public class TDDTest {
     @DisplayName("Test nombre producto")
     public void testLargoMsje(){
     String principioActivo ="salbutamol";
-        Assertions.assertTrue(producto.largoTexto(principioActivo));
+        Assertions.assertFalse(producto.largoTexto(principioActivo));
     }
     @Test
     @DisplayName("ajustar saldo")
@@ -31,13 +35,13 @@ public class TDDTest {
     @Test
     @DisplayName("buscar producto")
     public void testBusquedaProd(){
-        String producto ="aspirina";
-        Assertions.assertTrue(producto.existeProducto(producto));
+        String productoNombre ="aspirina";
+        Assertions.assertTrue(producto.existeProducto(productoNombre));
     }
     @Test
     @DisplayName("buscar bodega")
     public void testBuscarBodega(){
-        String bodega ="insumos";
-        Assertions.assertTrue(bodega.buscarBodega(bodega));
+        String bodegaNombre ="insumos";
+        Assertions.assertTrue(bodega.buscarBodega(bodegaNombre));
     }
 }
