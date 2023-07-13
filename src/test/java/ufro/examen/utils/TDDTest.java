@@ -24,6 +24,13 @@ public class TDDTest {
     @DisplayName("ajustar saldo")
     public void testSaldo(){
         Integer saldo =3000;
-        Assertions.assertTrue(producto.getSaldo(saldo));
+        Assertions.assertTrue(producto.setSaldo(saldo));
     }
+    @Test
+    @DisplayName("buscar producto")
+    public void testBusquedaProd(){
+        String producto ="aspirina";
+        Assertions.assertTrue(producto.existeProducto(producto));
+    }
+   
 }
