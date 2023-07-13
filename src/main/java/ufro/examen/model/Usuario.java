@@ -1,7 +1,8 @@
 package ufro.examen.model;
 
 public class Usuario {
-    String nombre;
-    String clave;
+    private Long id;
+    private String nombre;
+    private String clave;
 
 }

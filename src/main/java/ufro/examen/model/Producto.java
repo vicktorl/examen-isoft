@@ -10,14 +10,23 @@ import java.util.Date;
 public class Producto {
     String nombre;
     String lote;
-    Date fechaVencimiento;
+    String fechaVencimiento;
+    Integer precio;
 
     public Producto() {
     }
 
-    public Producto(String nombre, String lote, Date fechaVencimiento) {
-        this.nombre = nombre;
-        this.lote = lote;
-        this.fechaVencimiento = fechaVencimiento;
+    @Override
+    public String toString() {
+        return "Producto{" +
+                "nombre='" + nombre + '\'' +
+                ", lote='" + lote + '\'' +
+                ", fechaVencimiento='" + fechaVencimiento + '\'' +
+                ", precio=" + precio +
+                '}';
+    }
+
+    public boolean largoTexto(String principioActivo) {
+        return true;
     }
 }
