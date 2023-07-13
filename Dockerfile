@@ -10,6 +10,6 @@ FROM openjdk:17-slim
 
 EXPOSE 8080
 
-COPY --from=builder /build/target/examen-0.0.1-SNAPSHOT /app/test.jar
+COPY --from=builder /build/target/examen-0.0.1-SNAPSHOT.jar /app/test.jar
 
 CMD ["java", "-jar", "/app/test.jar"]
