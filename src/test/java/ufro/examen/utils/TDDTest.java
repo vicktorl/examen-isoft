@@ -32,5 +32,10 @@ public class TDDTest {
         String producto ="aspirina";
         Assertions.assertTrue(producto.existeProducto(producto));
     }
-
+    @Test
+    @DisplayName("buscar bodega")
+    public void testBuscarBodega(){
+        String bodega ="insumos";
+        Assertions.assertTrue(bodega.buscarBodega(bodega));
+    }
 }
